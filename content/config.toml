@@ -1,29 +1,27 @@
 [site]
-title = "Jiale Liu"
-description = "PhD student at the University of Example."
-favicon = "/favicon.svg"
-last_updated = "November 18, 2025"
+title = "Hanchen Yang"
+description = "PhD Candidate"
+favicon = "/favicon.png"
+last_updated = "December 25, 2025"
 
 [author]
-name = "Jiale Liu"
-title = "PhD Student"
-institution = "University of Example"
-avatar = "/bio.jpg"
+name = "Hanchen Yang"
+title = "PhD Candidate"
+institution = [
+  "Tongji University & The Hong Kong Polytechnic University",
+  "Shanghai, China"
+]
+avatar = "/bio1.jpg"
 
 [social]
 # Contact information (leave blank or delete to hide)
 
-email = "john.doe@example.com"
-location = "City, Country"
-location_url = "https://maps.google.com"
-location_details = [
-  "Room 123, Science Building,",
-  "University Avenue, City, Country"
-]
-google_scholar = "https://scholar.google.com"
-orcid = "https://orcid.org"
-github = "https://github.com"
-linkedin = "https://linkedin.com"
+email = "neobest@foxmail.com"
+
+google_scholar = "https://scholar.google.com/citations?user=74ypeYgAAAAJ&hl=zh-CN"
+orcid = ""
+github = "https://github.com/Neoyanghc"
+linkedin = "https://www.linkedin.com/in/%E6%B6%B5%E6%99%A8-%E6%9D%A8-230489373/"
 
 [features]
 # Show a like button on the about page
@@ -45,25 +43,7 @@ target = "publications"
 href = "/publications"
 
 [[navigation]]
-title = "Teaching"
-type = "page"
-target = "teaching"
-href = "/teaching"
-
-[[navigation]]
-title = "Awards"
-type = "page"
-target = "awards"
-href = "/awards"
-
-[[navigation]]
-title = "Services"
-type = "page"
-target = "services"
-href = "/services"
-
-[[navigation]]
 title = "CV"
-type = "page"
+type = "link"
 target = "cv"
-href = "/cv"
+href = "/cv.pdf"

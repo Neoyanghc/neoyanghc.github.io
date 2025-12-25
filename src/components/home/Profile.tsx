@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
+import Script from 'next/script';
 import {
     EnvelopeIcon,
     AcademicCapIcon,
@@ -42,7 +43,7 @@ export default function Profile({ author, social, features, researchInterests }:
     const [showEmail, setShowEmail] = useState(false);
     const [isEmailPinned, setIsEmailPinned] = useState(false);
     const [lastClickedTooltip, setLastClickedTooltip] = useState<'email' | 'address' | null>(null);
-
+    
     // Check local storage for user's like status
     useEffect(() => {
         if (!features.enable_likes) return;
@@ -129,9 +130,18 @@ export default function Profile({ author, social, features, researchInterests }:
                 <p className="text-lg text-accent font-medium mb-1">
                     {author.title}
                 </p>
-                <p className="text-neutral-600 mb-2">
-                    {author.institution}
-                </p>
+                {Array.isArray(author.institution) ? (
+                    author.institution.map((line, i) => (
+                        <p
+                            key={i}
+                            className={i === (author.institution as string[]).length - 1 ? 'text-neutral-600 mb-2' : 'text-neutral-600'}
+                        >
+                            {line}
+                        </p>
+                    ))
+                ) : (
+                    <p className="text-neutral-600 mb-2">{author.institution}</p>
+                )}
             </div>
 
             {/* Contact Links */}
@@ -312,6 +322,24 @@ export default function Profile({ author, social, features, researchInterests }:
                     </div>
                 </div>
             )}
+
+            {/* Visitor Map - 新增部分 */}
+            <div className="bg-neutral-100 dark:bg-neutral-800 rounded-lg p-4 mb-6 hover:shadow-lg transition-all duration-200 hover:scale-[1.02]">
+            <h3 className="font-semibold text-primary mb-3">🌍 Visitor Map</h3>
+            <p className="text-xs text-neutral-600 dark:text-neutral-500 mb-3 text-center">
+                Visitors from around the world
+            </p>
+
+            <div className="flex justify-center items-center">
+                <Script
+                id="clustrmaps"
+                src="//clustrmaps.com/map_v2.js?d=Aw6FgVqXeWk5U9lTxgKIWgoDYpse9i6bwBYYGDIx1oM&cl=ffffff&w=a"
+                strategy="afterInteractive"
+                />
+            </div>
+            </div>
+
+            
 
             {/* Like Button */}
             {features.enable_likes && (
