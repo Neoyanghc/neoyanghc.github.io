@@ -324,20 +324,19 @@ export default function Profile({ author, social, features, researchInterests }:
             )}
 
             {/* Visitor Map - 新增部分 */}
-            <div className="bg-neutral-100 dark:bg-neutral-800 rounded-lg p-4 mb-6 hover:shadow-lg transition-all duration-200 hover:scale-[1.02]">
-            <h3 className="font-semibold text-primary mb-3">🌍 Visitor Map</h3>
-            <p className="text-xs text-neutral-600 dark:text-neutral-500 mb-3 text-center">
-                Visitors from around the world
-            </p>
-
-            <div className="flex justify-center items-center">
-                <Script
-                id="clustrmaps"
-                src="//clustrmaps.com/map_v2.js?d=Aw6FgVqXeWk5U9lTxgKIWgoDYpse9i6bwBYYGDIx1oM&cl=ffffff&w=a"
-                strategy="afterInteractive"
-                />
-            </div>
-            </div>
+                <div className="flex justify-center">
+                <a
+                    href="https://clustrmaps.com/site/Aw6FgVqXeWk5U9lTxgKIWgoDYpse9i6bwBYYGDIx1oM"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <img
+                    src="//clustrmaps.com/map_v2.png?d=Aw6FgVqXeWk5U9lTxgKIWgoDYpse9i6bwBYYGDIx1oM&cl=ffffff"
+                    alt="Visitor Map"
+                    className="w-full max-w-[320px] rounded-md"
+                    />
+                </a>
+                </div>
 
             
 
