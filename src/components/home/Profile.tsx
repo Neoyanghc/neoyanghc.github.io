@@ -330,7 +330,7 @@ export default function Profile({ author, social, features, researchInterests }:
                     rel="noopener noreferrer"
                 >
                     <img
-                    src="//clustrmaps.com/map_v2.png?d=Aw6FgVqXeWk5U9lTxgKIWgoDYpse9i6bwBYYGDIx1oM&cl=ffffff"
+                    src="//clustrmaps.com/map_v2.png?cl=ffffff&w=a&t=tt&d=Aw6FgVqXeWk5U9lTxgKIWgoDYpse9i6bwBYYGDIx1oM&co=2d78ad&ct=ffffff"
                     alt="Visitor Map"
                     className="w-full max-w-[320px] rounded-md"
                     />
