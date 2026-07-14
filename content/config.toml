@@ -1,15 +1,14 @@
 [site]
 title = "Hanchen Yang"
-description = "PhD Candidate"
+description = "PhD"
 favicon = "/favicon.png"
-last_updated = "December 25, 2025"
+last_updated = "June 25, 2026"
 
 [author]
 name = "Hanchen Yang"
-title = "PhD Candidate"
+title = "PhD"
 institution = [
   "Tongji University & The Hong Kong Polytechnic University",
-  "Shanghai, China"
 ]
 avatar = "/bio1.jpg"
 
