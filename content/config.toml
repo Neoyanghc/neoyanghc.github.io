@@ -33,14 +33,14 @@ type = "page"
 target = "about"
 href = "/"
 
-[[navigation]]
-title = "Publications"
-type = "page"
-target = "publications"
-href = "/publications"
+# [[navigation]]
+# title = "Publications"
+# type = "page"
+# target = "publications"
+# href = "/publications"
 
-[[navigation]]
-title = "CV"
-type = "link"
-target = "cv"
-href = "/cv.pdf"
+# [[navigation]]
+# title = "CV"
+# type = "link"
+# target = "cv"
+# href = "/cv.pdf"
