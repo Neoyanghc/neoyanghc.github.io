@@ -1,9 +1,4 @@
-I am currently a Ph.D. candidate in Computer Science and Technology, jointly trained by Tongji University (TJU) and The Hong Kong Polytechnic University (PolyU), supervisor by [Prof. Jiannong Cao](https://www4.comp.polyu.edu.hk/~labimcl/director.html) and [Prof. Jihong Guan](https://admis-tongji.github.io/members/00jihong-guan.html).
+I am currently working at Kuaishou, focusing on large language models for recommender systems (LLM4Rec).
+I received my Ph.D. in Computer Science and Technology in Tongji University (TJU) and The Hong Kong Polytechnic University (PolyU), under the supervision of [Prof. Jiannong Cao](https://www4.comp.polyu.edu.hk/~labimcl/director.html) and [Prof. Jihong Guan](https://admis-tongji.github.io/members/00jihong-guan.html). From April to November 2025, I was a visiting scholar at the University of Illinois Chicago (UIC), advised by [Prof. Philip S. Yu](https://cs.uic.edu/profiles/philip-yu/).
 
-Prior to this, I received my B.Sc degrees from Beijing Jiaotong University (BJTU) in Computer Science and Technology (Top 10%). From April 2025 to November 2025, I was a visiting scholar at the University of Illinois Chicago (UIC), advised by [Prof. Philip S. Yu](https://cs.uic.edu/profiles/philip-yu/).
-
-My research focuses on data mining, graph neural networks, and foundation models.  I have published more than 20 papers in total, including 5 first-authored papers.
-
-I am open to research discussions and collaborations. Please feel free to contact me.
-
-
+My research interests include data mining, LLM4Rec, and Agentic System. I am always open to research discussions and collaborations. Please feel free to contact me.
