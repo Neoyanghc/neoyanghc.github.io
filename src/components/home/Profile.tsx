@@ -7,7 +7,8 @@ import {
     EnvelopeIcon,
     AcademicCapIcon,
     HeartIcon,
-    MapPinIcon
+    MapPinIcon,
+    PhoneIcon
 } from '@heroicons/react/24/outline';
 import { MapPinIcon as MapPinSolidIcon, EnvelopeIcon as EnvelopeSolidIcon } from '@heroicons/react/24/solid';
 import { HeartIcon as HeartSolidIcon } from '@heroicons/react/24/solid';
@@ -73,6 +74,12 @@ export default function Profile({ author, social, features, researchInterests }:
             href: `mailto:${social.email}`,
             icon: EnvelopeIcon,
             isEmail: true,
+        }] : []),
+        ...(social.phone ? [{
+            name: 'Phone',
+            href: `tel:${social.phone.replace(/\s/g, '')}`,
+            icon: PhoneIcon,
+            isPhone: true,
         }] : []),
         ...(social.location || social.location_details ? [{
             name: 'Location',
@@ -299,8 +306,9 @@ export default function Profile({ author, social, features, researchInterests }:
                         <a
                             key={link.name}
                             href={link.href}
-                            target="_blank"
-                            rel="noopener noreferrer"
+                            target={link.href.startsWith('http') ? '_blank' : undefined}
+                            rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                            title={link.isPhone ? social.phone : undefined}
                             className="p-2 sm:p-2 text-neutral-600 dark:text-neutral-400 hover:text-accent transition-colors duration-200"
                             aria-label={link.name}
                         >
