@@ -42,6 +42,7 @@ export default function Profile({ author, social, features, researchInterests }:
     const [isAddressPinned, setIsAddressPinned] = useState(false);
     const [showEmail, setShowEmail] = useState(false);
     const [isEmailPinned, setIsEmailPinned] = useState(false);
+    const [showPhone, setShowPhone] = useState(false);
     const [lastClickedTooltip, setLastClickedTooltip] = useState<'email' | 'address' | null>(null);
     
     // Check local storage for user's like status
@@ -77,7 +78,7 @@ export default function Profile({ author, social, features, researchInterests }:
         }] : []),
         ...(social.phone ? [{
             name: 'Phone',
-            href: `tel:${social.phone.replace(/\s/g, '')}`,
+            href: '#',
             icon: PhoneIcon,
             isPhone: true,
         }] : []),
@@ -296,6 +297,38 @@ export default function Profile({ author, social, features, researchInterests }:
                                                 </div>
                                             </div>
                                             <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-neutral-800"></div>
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
+                            </div>
+                        );
+                    }
+                    if (link.isPhone) {
+                        return (
+                            <div key={link.name} className="relative">
+                                <button
+                                    onClick={() => setShowPhone(!showPhone)}
+                                    className={`p-2 sm:p-2 transition-colors duration-200 ${showPhone
+                                        ? 'text-accent'
+                                        : 'text-neutral-600 dark:text-neutral-400 hover:text-accent'
+                                        }`}
+                                    aria-label={link.name}
+                                    aria-expanded={showPhone}
+                                >
+                                    <PhoneIcon className="h-5 w-5" />
+                                </button>
+
+                                <AnimatePresence>
+                                    {showPhone && (
+                                        <motion.div
+                                            initial={{ opacity: 0, y: 10, scale: 0.8 }}
+                                            animate={{ opacity: 1, y: -10, scale: 1 }}
+                                            exit={{ opacity: 0, y: -20, scale: 0.8 }}
+                                            className="absolute top-0 left-1/2 z-20 -translate-x-1/2 -translate-y-full whitespace-nowrap rounded-lg bg-neutral-800 px-4 py-3 text-sm font-medium text-white shadow-lg"
+                                        >
+                                            <p className="mb-1 text-center font-semibold">Phone</p>
+                                            <p>{social.phone}</p>
+                                            <div className="absolute top-full left-1/2 h-0 w-0 -translate-x-1/2 border-l-4 border-r-4 border-t-4 border-transparent border-t-neutral-800"></div>
                                         </motion.div>
                                     )}
                                 </AnimatePresence>
