@@ -113,7 +113,7 @@ export default function Navigation({ items, siteTitle, enableOnePageMode }: Navi
                 <div className="hidden lg:block">
                   <div className="ml-10 flex items-center space-x-8">
                     <div className="flex items-baseline space-x-8">
-                      {items.map((item) => {
+                      {items.filter((item) => !item.hidden).map((item) => {
                         const isActive = enableOnePageMode
                           ? activeHash === `#${item.target}` || (!activeHash && item.target === 'about')
                           : (item.href === '/'
@@ -191,7 +191,7 @@ export default function Navigation({ items, siteTitle, enableOnePageMode }: Navi
                   className="lg:hidden bg-background/95 backdrop-blur-xl border-b border-neutral-200/50 shadow-lg"
                 >
                   <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                    {items.map((item, index) => {
+                    {items.filter((item) => !item.hidden).map((item, index) => {
                       const isActive = enableOnePageMode
                         ? (item.href === '/' ? pathname === '/' && !activeHash : activeHash === `#${item.target}`)
                         : (item.href === '/'
