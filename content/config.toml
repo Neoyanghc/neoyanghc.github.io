@@ -16,6 +16,54 @@ avatar = "/bio1.jpg"
 # Contact information (leave blank or delete to hide)
 
 email = "neobest@foxmail.com"
+phone = "+86 18019255548"
+
+google_scholar = "https://scholar.google.com/citations?user=74ypeYgAAAAJ&hl=zh-CN"
+linkedin = "https://www.linkedin.com/in/hanchen-yang-230489373"
+
+[features]
+# Show a like button on the about page
+enable_likes = true
+
+# Display all subpages on a single page
+enable_one_page_mode = false
+
+[[navigation]]
+title = "About"
+type = "page"
+target = "about"
+href = "/"
+
+[[navigation]]
+title = "Publications"
+type = "page"
+target = "publications"
+href = "/publications"
+hidden = true
+
+[[navigation]]
+title = "CV"
+type = "link"
+target = "cv"
+href = "/cv.pdf"
+[site]
+title = "Hanchen Yang"
+description = "PhD"
+favicon = "/favicon.png"
+last_updated = "June 25, 2026"
+
+[author]
+name = "Hanchen Yang"
+title = "PhD"
+institution = [
+  "Tongji University & The Hong Kong Polytechnic University",
+]
+avatar = "/bio1.jpg"
+
+[social]
+# Contact information (leave blank or delete to hide)
+
+email = "neobest@foxmail.com"
 
 google_scholar = "https://scholar.google.com/citations?user=74ypeYgAAAAJ&hl=zh-CN"
 linkedin = "https://www.linkedin.com/in/hanchen-yang-230489373"
